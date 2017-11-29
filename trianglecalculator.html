@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.php" method="post" id="form1">
+        First Leg: <input type="text" id="leg1"><br>
+        Second Leg: <input type="text" id="leg2"><br>
+        Third Leg: <input type="text" id="leg3"><br>
+        <button type="button" onclick="submit()">Submit</button>
+    </form>
+    <p id="outputText1"></p>
+    <p id="outputText2"></p>
+<script>
+function hypotenuse(a,b) {
+    return Math.sqrt(a ** 2 + b ** 2);
+};
+function triangleType(a,b,c) {
+    hypoLength = hypotenuse(a,b);
+    if (c > hypoLength) {
+        return ("Obtuse");
+    };
+    if (c == hypoLength) {
+        return ("Right");
+    };
+    if (c < hypoLength) {
+        return ("Acute");
+    };
+};
+
+var leg1 = 3 ;
+var leg2 = 4 ;
+var leg3 = 5 ;
+
+document.getElementById("outputText1").innerHTML = hypotenuse(leg1,leg2);
+document.getElementById("outputText2").innerHTML = triangleType(leg1,leg2,leg3);
+</script>
+</body>
+</html>
