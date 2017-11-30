@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/action_page.php" method="post" id="form1">
-        First Leg: <input type="text" id="leg1"><br>
-        Second Leg: <input type="text" id="leg2"><br>
-        Third Leg: <input type="text" id="leg3"><br>
-        <button type="button" onclick="submit()">Submit</button>
-    </form>
-    <p id="outputText1"></p>
-    <p id="outputText2"></p>
-<script>
-function hypotenuse(a,b) {
-    return Math.sqrt(a ** 2 + b ** 2);
-};
-function triangleType(a,b,c) {
-    hypoLength = hypotenuse(a,b);
-    if (c > hypoLength) {
-        return ("Obtuse");
-    };
-    if (c == hypoLength) {
-        return ("Right");
-    };
-    if (c < hypoLength) {
-        return ("Acute");
-    };
-};
-
-var leg1 = 3 ;
-var leg2 = 4 ;
-var leg3 = 5 ;
-
-document.getElementById("outputText1").innerHTML = hypotenuse(leg1,leg2);
-document.getElementById("outputText2").innerHTML = triangleType(leg1,leg2,leg3);
-</script>
-</body>
+<html>
+	<head>
+		<!--<link rel="stylesheet" href="stylesheet.css">-->
+		<link rel="script" href="hypotenuse.js">
+	</head>
+	<body>
+		<h1 class="heading1">
+			This is a heading
+		</h1>
+		<p class="para1">
+			Type in two hypothetical leg lengths to determine the length of the hypotenuse
+		</p>
+            <p>First leg</p>
+		<input id="leg1"><br>
+            <p>Second leg</p>
+		<input id="leg2"><br>
+		<p id = "output">
+			This text will be replaced by output from the script.
+		</p>
+		<button onclick="run()">Print hypotenuse</button>
+		<script>
+			function hypotenuse(a,b) {
+			return Math.sqrt(a**2 + b**2)
+			}
+			function run() {
+			var leg1 = document.getElementById("leg1").value;
+			var leg2 = document.getElementById("leg2").value;
+document.getElementById("output").innerHTML = hypotenuse(leg1,leg2);
+			}
+		</script>
+	</body>
 </html>
