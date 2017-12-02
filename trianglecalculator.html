@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<script src="hypotenuse.js"></script>
-	</head>
-	<body>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="triangles.js"></script>
+	<title>Hypotenuse Calculator</title>
+</head>
+
+<body>
+	<div class="hypo">
 		<h1 class="heading1">Hypotenuse Calculator</h1>
 		<p class="para1">Type in two hypothetical leg lengths to determine the length of the hypotenuse.</p>
-            <p class="formLabel">First leg</p>
-		<input id="leg1" class="inputBox"><br>
-            <p class="formLabel">Second leg</p>
-		<input id="leg2" class="inputBox"><br><br>
+		<p class="formLabel">First leg</p>
+		<input id="leg1" class="inputBox">
+		<br>
+		<p class="formLabel">Second leg</p>
+		<input id="leg2" class="inputBox">
+		<br>
+		<br>
 		<button onclick="run()" class="button">Print hypotenuse</button>
-		<p id = "output" class="output"></p>
-	</body>
+		<p id="output" class="output"></p>
+		<br>
+		<br>
+	</div>
+	<div class="classifier">
+		<h1 class="heading2">Triangle Classifier</h1>
+		<p class="para2">Type in 3 leg lengths to classify as forming an acute, obtuse, or right triangle. Will also determine what kind of special
+			right triangle the lengths form. Enter the lengths from least to greatest, with the hypotenuse being the longest.</p>
+		<p class="formLabel">First leg</p>
+		<input id="classleg1" class="inputBox">
+		<br>
+		<p class="formLabel">Second leg</p>
+		<input id="classleg2" class="inputBox">
+		<br>
+		<p class="formLabel">Hypotenuse</p>
+		<input id="classhypotenuse" class="inputBox">
+		<br>
+		<br>
+		<button onclick="run2()" class="button">Print classification</button>
+		<p id="output2" class="output"></p>
+		<br>
+		<br>
+	</div>
+</body>
+
 </html>
