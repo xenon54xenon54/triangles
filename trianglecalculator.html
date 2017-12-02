@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--<link rel="stylesheet" href="stylesheet.css">-->
+		<link rel="stylesheet" href="style.css">
 		<script src="hypotenuse.js"></script>
 	</head>
 	<body>
-		<h1 class="heading1">
-			This is a heading
-		</h1>
-		<p class="para1">
-			Type in two hypothetical leg lengths to determine the length of the hypotenuse
-		</p>
-            <p>First leg</p>
-		<input id="leg1"><br>
-            <p>Second leg</p>
-		<input id="leg2"><br>
-		<p id = "output">
-			This text will be replaced by output from the script.
-		</p>
-		<button onclick="run()">Print hypotenuse</button>
+		<h1 class="heading1">Hypotenuse Calculator</h1>
+		<p class="para1">Type in two hypothetical leg lengths to determine the length of the hypotenuse.</p>
+            <p class="formLabel">First leg</p>
+		<input id="leg1" class="inputBox"><br>
+            <p class="formLabel">Second leg</p>
+		<input id="leg2" class="inputBox"><br><br>
+		<button onclick="run()" class="button">Print hypotenuse</button>
+		<p id = "output" class="output"></p>
 	</body>
 </html>
